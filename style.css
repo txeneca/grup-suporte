@@ -1,0 +1,125 @@
+body {
+    background: #fefefe;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: #222;
+}
+
+.site-header {
+    background: #ff7700;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+.hero {
+    padding: 30px 10px;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.lead {
+    margin: 10px 0 25px;
+    font-size: 1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 380px;
+    margin: auto;
+}
+
+.btn {
+    padding: 16px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.08rem;
+    font-weight: bold;
+    transition: 0.25s;
+    width: 100%;
+}
+
+.primary {
+    background: #05a63a;
+    color: #fff;
+}
+.secondary {
+    background: #0058ff;
+    color: #fff;
+}
+.highlight {
+    background: #ff9900;
+    color: #fff;
+}
+
+.pulse { animation: pulse 1.8s infinite; }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.stat-box {
+    margin-top: 20px;
+}
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7700;
+}
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* TOAST styling */
+#toast-container {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 9999;
+}
+.toast {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,.12);
+    animation: toast-in .45s forwards;
+}
+.avatar {
+    background: #ff7700;
+    color: #fff;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    margin-right:10px;
+}
+.text small {
+    opacity: .6;
+    display:block;
+    font-size: .75rem;
+}
+@keyframes toast-in {
+    from { transform: translateX(-40px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes toast-out {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-40px); opacity: 0; }
+}
